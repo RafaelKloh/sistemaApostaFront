@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    color: rgb(85, 53, 53);
     
 }
 button{
@@ -10,7 +10,7 @@ button{
     border: none;
 }
 body{
-    background-color: #7e4c3f;
+    background-color: #c90000;
     display: flex;
     align-items: center;
     height: 100vh;
