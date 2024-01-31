@@ -3,7 +3,7 @@ const myHeaders = {
     "Content-Type": "application/json",
 };
 
-async function login() {
+async function apostar() {
     const email = document.querySelector("#email")
     const senha = document.querySelector("#senha")
     const user = {
@@ -13,7 +13,7 @@ async function login() {
 
 const bodyJson = JSON.stringify(user)
     const res = await fetch(
-        "http://localhost:3000/login",
+        "http://localhost:3000/apostar",
         {
             headers: myHeaders,
             method: "POST",
@@ -30,7 +30,7 @@ const bodyJson = JSON.stringify(user)
     for (let i = 0; i < resJson.length; i++) {
 
         if(resJson[i].email == email.value && resJson[i].senha == senha.value){
-            window.location.replace('/menuUsuario/index.html')
+            window.location.replace('/apostar/index.html')
         }
     }
 }
