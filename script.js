@@ -30,6 +30,7 @@ const bodyJson = JSON.stringify(user)
     for (let i = 0; i < resJson.length; i++) {
 
         if(resJson[i].email == email.value && resJson[i].senha == senha.value){
+            localStorage.setItem("idUsuarioSistemaAposta",resJson[i].idUsuario)
             window.location.replace('/menuUsuario/index.html')
         }
     }
