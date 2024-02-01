@@ -1,39 +1,101 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: rgb(85, 53, 53);
+body
+{
+    background-color: #2a3046;
+}
+h1
+{
+  color:#ffffff;
+  text-align:center;
+  font-family:"jeldin";
+  font-size: 50px;
+}
+label
+{
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.8;
+}
+p
+{
+    color: #ccc;
+}
+a
+{
+    color: rgb(6, 6, 104);
+}
+button
+{
+    width: 100%;
+
+    height: 40px;
+
+    background-color: #a13854;
+
+    border:none;
+
+    color:#e1e1e1;
+
+    margin: 10px 0;
+
+}
+input#email
+{
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color:#ffffff;
+    width:270px;
+}
+input#senha
+{
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color:#ffffff;
+    width:270px;
+}
+
+
+input#nome
+{
+    
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color:#ffffff;
+    width:270px;
+}
+
+h1
+{
+    
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    position: relative;
+    top: 156px;
     
 }
-button{
-    cursor: pointer;
-    border: none;
-}
-body{
-    background-color: #c90000;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-}
-#logo{
-    height: 227px;
-}
-#main-login{
-    max-width: 500px;
-    width: 100%;
-    background-color: #2d9c49;
-    display: flex;
-    padding: 16px;
-    border-radius: 16px;
-    gap: 16px;
-    box-shadow: 8px 8px 6px 3px black;
-}
-#main-cadastro{
-    max-width: 500px;
-    width: 100%;
-    background-color: #ffffff;
-}
-.btn-bd-primary {
-    --bs-btn-font-weight: 600;
+.card
+{
+    background-color: rgba(19, 19, 19, 0.3);
+    padding: 40px;
+    border-radius: 2px;
+    width: 280px;
+    position: relative;
+    left: 290px;
+    top: 100px;
 }
