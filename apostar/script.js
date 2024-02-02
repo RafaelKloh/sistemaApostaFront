@@ -1,4 +1,5 @@
-//import {criarModal} from "./modal.js"
+import {criarModal} from "../modal.js"
+
 const myHeaders = {
     "Content-Type": "application/json",
 };
@@ -45,7 +46,24 @@ async function apostar(){
         valorApostado:valorApostado.value
     }
 
-    console.log(aposta)
+    if(numeroUsuario.value <= 0 || numeroUsuario.value > 99){
+        const mensagemErro = "Escolha uma opção de aposta válida"
+        criarModal(mensagemErro)
+        return
+    }
+
+    if(idUsuario == "" || idUsuario == undefined){
+        const mensagemErro = "Você deve estar logado para fazer isso"
+        criarModal(mensagemErro)
+        return
+    }
+
+    if(numeroUsuario.value == "" || valorApostado.value == ""){
+        const mensagemErro = "Você preencher todos os campos"
+        criarModal(mensagemErro)
+        return
+    }
+ 
 
     const bodyJson = JSON.stringify(aposta)
     const res = await fetch(
