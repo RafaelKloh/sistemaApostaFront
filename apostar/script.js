@@ -44,8 +44,23 @@ async function apostar(){
         idFormaPagamento:idFormaPagamento,
         valorApostado:valorApostado.value
     }
-    
+
+    console.log(aposta)
+
+    const bodyJson = JSON.stringify(aposta)
+    const res = await fetch(
+        `http://localhost:3000/user/aposta/${idUsuario}`,
+        {
+            headers: myHeaders,
+            method: "POST",
+            body: bodyJson
+        }
+    )
+    const resJson = await res.json()
+    console.log(resJson)
+
 }
+
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
