@@ -29,7 +29,7 @@ a {
     color: rgb(6, 6, 104);
 }
 
-button {
+input[type = "submit"] {
     width: 100%;
     height: 40px;
     background-color: #a13854;
