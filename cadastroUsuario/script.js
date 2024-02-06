@@ -36,8 +36,7 @@ async function cadastrar() {
 
 
     const resJson = await res.json()
-
-    if (resJson.erro === 'Email ja cadastrado') {
+    if (resJson.mensagem === 'Email ja cadastrado') {
         const mensagemErro = "Email ja cadastrado"
         criarModal(mensagemErro)
     }

@@ -12,7 +12,7 @@
     <form id="form">
         <label>Escolha um numero</label>
         <br>
-        <input type="number" placeholder="00-99" id="numeroAposta">
+        <input type="number" placeholder="00-99" id="numeroAposta" min="00" max="99">
         <br>
         <label>Escolha um valor para sua aposta</label>
         <br>
@@ -24,6 +24,9 @@
         </select>
         <br>
         <button id="botao-aposta">APOSTAR</button>
+    </form>
+    <form id="tabelaAnimais">
+        <input type="submit" name="tabelaAnimais" value="VER TABELA" id="tabelaAnimais">
     </form>
     <script src="./script.js" type="module"></script>
 </body>

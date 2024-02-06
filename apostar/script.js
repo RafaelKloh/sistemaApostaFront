@@ -1,4 +1,4 @@
-import {criarModal} from "../modal.js"
+import {criarModal, mostrarAnimais} from "../modal.js"
 
 const myHeaders = {
     "Content-Type": "application/json",
@@ -77,10 +77,24 @@ async function apostar(){
     const resJson = await res.json()
     console.log(resJson)
 
+    console.log(res.status)
+    if(res.status == 200){
+        window.location.replace("../resultadoAposta/index.html")
+    }
+
 }
+
+
 
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     apostar()
+})
+
+const verAnimais = document.getElementById("tabelaAnimais")
+verAnimais.addEventListener("submit", (event) => {
+    event.preventDefault()
+    mostrarAnimais()
+    return
 })

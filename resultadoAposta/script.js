@@ -1,33 +1,22 @@
-const myHeaders = {
-    "Content-Type": "application/json",
-};
+async function sortearNumero(){
+    let min = 0;
+    let max = 99;
+    let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(numeroAleatorio);
 
-async function loteria(){
-    const res = await fetch(
-        "https://loteriascaixa-api.herokuapp.com/api/federal/latest",
-        {
-            headers: myHeaders,
-            method: "GET",
+    let bichos = ["avestruz","aguia","burro","borboleta","cachorro","cabra","carneiro","camelo","cobra","coelho","cavalo","elefante","galo","gato","jacare","leao","macaco","porco","pavao","peru","touro","tigre","urso","veado","vaca"]
+    let indice = 0;
+
+    while (indice < bichos.length) {
+        if(numeroAleatorio >= indice * 4 + 1 && numeroAleatorio <= (indice + 1) * 4){
+            console.log(bichos[indice]);
+            break; 
         }
-    )
-
-    const resJson = await res.json()
-    localStorage.setItem("concurso",resJson.concurso)
-}
-loteria()
-
-async function resultadoLoteria(){
-    const concurso = localStorage.getItem("concurso")
-    const resConcurso = await fetch(
-        `https://loteriascaixa-api.herokuapp.com/api/federal/${concurso}`,
-        {
-            headers: myHeaders,
-            method: "GET",
+        if(numeroAleatorio == 0){
+            console.log(bichos[24])
         }
-    )
-    const resConcursoJson = await resConcurso.json()
-    console.log(resConcursoJson)
-
-    
+        indice++;
+    }
 }
-resultadoLoteria()
+
+sortearNumero();
