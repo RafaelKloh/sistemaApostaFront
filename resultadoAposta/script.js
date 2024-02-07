@@ -1,22 +1,66 @@
-async function sortearNumero(){
+import {criarModal,modalResult} from "../modal.js"
+const myHeaders = {
+    "Content-Type": "application/json",
+};
+
+async function resultado() {
     let min = 0;
     let max = 99;
     let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(numeroAleatorio);
 
     let bichos = ["avestruz","aguia","burro","borboleta","cachorro","cabra","carneiro","camelo","cobra","coelho","cavalo","elefante","galo","gato","jacare","leao","macaco","porco","pavao","peru","touro","tigre","urso","veado","vaca"]
-    let indice = 0;
+    let i = 0;
 
-    while (indice < bichos.length) {
-        if(numeroAleatorio >= indice * 4 + 1 && numeroAleatorio <= (indice + 1) * 4){
-            console.log(bichos[indice]);
+    let animal = []
+    while (i < bichos.length) {
+        if(numeroAleatorio >= i * 4 + 1 && numeroAleatorio <= (i + 1) * 4){
+            animal = bichos[i]
             break; 
         }
         if(numeroAleatorio == 0){
-            console.log(bichos[24])
+            animal = bichos[24]
         }
-        indice++;
+        i++;
+    }
+
+    animal = bichos[i]
+    console.log(animal)
+    const dataSelecionada = dataConcurso.value
+    const result = {
+        dataSorteio:dataSelecionada,
+        numeroMaquina:numeroAleatorio,
+        animalSorteado:animal
+    }
+
+const bodyJson = JSON.stringify(result)
+    const res = await fetch(
+        "http://localhost:3000/user/resultado",
+        {
+            headers: myHeaders,
+            method: "POST",
+            body: bodyJson
+        }
+    )
+    const resJson = await res.json()
+    console.log(resJson)
+
+    if(resJson.mensagem == "Sorteio ainda nao realizado"){
+        const mensagemErro = "Sorteio ainda nao realizado"
+        criarModal(mensagemErro)
+        return
+    }
+    else{
+        const animal = resJson[0].animalSorteado
+        const numero = resJson[0].numeroMaquina
+        modalResult(animal,numero)
+        return
     }
 }
 
-sortearNumero();
+
+
+const form = document.getElementById("form")
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    resultado()
+})

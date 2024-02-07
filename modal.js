@@ -31,3 +31,22 @@ export function mostrarAnimais(){
         const modalContainer = document.querySelector(".modalContainer")
         modalContainer.remove()}
 )}
+
+export function modalResult(animal,numero){
+    const body = document.body
+    body.insertAdjacentHTML("beforeend",`
+    <div class="modalContainer">
+        <div class="modalPrincipal">
+            <p>${animal}</p>
+            <p>${numero}</p>
+            <button id="botaoModal">OK</button>
+        </div>
+    </div>
+    `)
+
+    const botaoModal = document.querySelector("#botaoModal")
+    botaoModal.addEventListener("click",()=>{
+        const modalContainer = document.querySelector(".modalContainer")
+        modalContainer.remove()
+    })
+}
