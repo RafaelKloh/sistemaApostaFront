@@ -77,3 +77,9 @@ input#valor{
     transform: translateX(-50%);
     top: 100px;
 }
+#lupe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
