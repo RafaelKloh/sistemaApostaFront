@@ -67,6 +67,18 @@ input#valor{
     position: relative;
     left: 76px;
 }
+input#image{
+    margin-top: 44px;
+    padding: 80px 5px;
+    border: none;
+    border-bottom: 1px solid #e1e1e1d8;
+    outline: none;
+    color: #000000;
+    width: 168px;
+    top: 1px;
+    position: relative;
+    left: 56px;
+}
 .card {
     background-color: rgba(19, 19, 19, 0.3);
     padding: 40px;
