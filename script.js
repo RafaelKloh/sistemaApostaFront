@@ -28,10 +28,15 @@ const bodyJson = JSON.stringify(user)
         criarModal(mensagemErro)
     }
     for (let i = 0; i < resJson.length; i++) {
-
         if(resJson[i].email == email.value && resJson[i].senha == senha.value){
             localStorage.setItem("idUsuarioSistemaAposta",resJson[i].idUsuario)
-            window.location.replace('/menuUsuario/index.html')
+            if(resJson[i].idTipoUsuario == 1){
+                window.location.replace('/menuUsuario/index.html')
+            }
+            else{
+                window.location.replace('/menuAdmin/index.html')
+            }
+            
         }
     }
 }

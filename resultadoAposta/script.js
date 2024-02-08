@@ -25,9 +25,10 @@ async function resultado() {
 
     animal = bichos[i]
     console.log(animal)
-    const dataSelecionada = dataConcurso.value
+    const data = dataConcurso.value
+    console.log(data)
     const result = {
-        dataSorteio:dataSelecionada,
+        dataSorteio:data,
         numeroMaquina:numeroAleatorio,
         animalSorteado:animal
     }
@@ -44,11 +45,12 @@ const bodyJson = JSON.stringify(result)
     const resJson = await res.json()
     console.log(resJson)
 
-    if(resJson.mensagem == "Sorteio ainda nao realizado"){
+    if(resJson.mensagem == "Sorteio ainda não realizado"){
         const mensagemErro = "Sorteio ainda nao realizado"
         criarModal(mensagemErro)
         return
     }
+
     else{
         const animal = resJson[0].animalSorteado
         const numero = resJson[0].numeroMaquina
