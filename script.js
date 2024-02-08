@@ -1,3 +1,4 @@
+import {criarModal} from "./modal.js"
 const myHeaders = {
     "Content-Type": "application/json",
 };
@@ -20,10 +21,17 @@ const bodyJson = JSON.stringify(user)
         }
     )
     const resJson = await res.json()
+    console.log(resJson)
+
+    if(resJson.mensagem){
+        const mensagemErro = "Usuario não encontrado"
+        criarModal(mensagemErro)
+    }
     for (let i = 0; i < resJson.length; i++) {
 
         if(resJson[i].email == email.value && resJson[i].senha == senha.value){
-            window.location.replace('/VEDPSANTESQUETUSEESQUEÇAEDETUDOERRADO/')
+            localStorage.setItem("idUsuarioSistemaAposta",resJson[i].idUsuario)
+            window.location.replace('/menuUsuario/index.html')
         }
     }
 }
