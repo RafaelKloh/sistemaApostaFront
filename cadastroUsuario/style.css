@@ -9,7 +9,7 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     position: relative;
-    top: 200px;
+    top: 170px;
     left: 10px;
 }
 
@@ -20,9 +20,28 @@ label {
     position: relative;
     top: 40px;
 }
-
+label#nome {
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.8;
+    position: relative;
+    top: 60px;
+}
+label#email{
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.8;
+    position: relative;
+    top: 21px;
+}
 p {
-    color: #ccc;
+    
+    color: #fff;
+    font-size: 15px;
+    opacity: 1.8;
+    position: relative;
+    top: 23px;
+    left: 40px;
 }
 
 a {
@@ -49,8 +68,8 @@ input#email{
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #ffffff;
-    width: 270px;
-    top:40px;
+    width: 220px;
+    top:14px;
     position: relative;
 }
 input#senha{
@@ -61,19 +80,19 @@ input#senha{
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #ffffff;
-    width: 270px;
-    top:40px;
+    width: 220px;
+    top:33px;
     position: relative;
 }
 input#nome {
-    margin-top: 42px;
+    margin-top: 60px;
     padding: 0 5px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #ffffff;
-    width: 270px;
+    width: 220px;
 }
 
 .card {
@@ -94,6 +113,6 @@ input#btn-login{
     color: #e1e1e1;
     margin: 10px 0;
     padding: 5px;
-    top: 25px;
+    top: 27px;
     position: relative;
 }

@@ -9,8 +9,8 @@ h1 {
     font-size: 38px;
     font-weight: bold;
     position: relative;
-    top: 200px;
-    left: 10px;
+    top: 160px;
+    left: 0px;
 }
 
 label {
@@ -37,7 +37,7 @@ input[type = "submit"] {
     color: #e1e1e1;
     margin: 10px 0;
     padding: 5px;
-    top: 25px;
+    top: 38px;
     position: relative;
 }
 
@@ -49,7 +49,7 @@ input#email{
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #ffffff;
-    width: 270px;
+    width: 200px;
     top:40px;
     position: relative;
 }
@@ -61,7 +61,7 @@ input#senha{
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #ffffff;
-    width: 270px;
+    width: 200px;
     top:40px;
     position: relative;
 }
