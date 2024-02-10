@@ -3,6 +3,11 @@ const myHeaders = {
     "Content-Type": "application/json",
 };
 
+// const validacao = localStorage.getItem("idUsuarioSistemaAposta")
+// if(validacao != true){
+//     window.location.replace('../index.html')
+// }
+
 async function resultado() {
     let min = 0;
     let max = 99;
@@ -24,9 +29,7 @@ async function resultado() {
     }
 
     animal = bichos[i]
-    console.log(animal)
     const data = dataConcurso.value
-    console.log(data)
     const result = {
         dataSorteio:data,
         numeroMaquina:numeroAleatorio,
@@ -52,6 +55,29 @@ const bodyJson = JSON.stringify(result)
     }
 
     else{
+        const idUsuario = localStorage.getItem("idUsuarioSistemaAposta")
+        const partesData = data.split('-');
+        const dataInvertida = partesData.reverse().join('-');
+        const bodyData = {
+            dataSorteio:dataInvertida
+        }
+    
+    const bodyJson = JSON.stringify(bodyData)
+        const resSelect = await fetch(
+            `http://localhost:3000/user/${idUsuario}/resultadoApostaUsuario`,
+            {
+                headers: myHeaders,
+                method: "POST",
+                body: bodyJson
+            }
+        )
+        const resJsonSelect = await resSelect.json()
+        console.log(resJsonSelect)
+        for (let i = 0; i < resJsonSelect.length; i++) {
+            if(resJsonSelect[i].idUsuario == idUsuario){
+                console.log("voce ganhou nada")
+            }
+        }
         const animal = resJson[0].animalSorteado
         const numero = resJson[0].numeroMaquina
         modalResult(animal,numero)
@@ -59,10 +85,11 @@ const bodyJson = JSON.stringify(result)
     }
 }
 
-
-
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     resultado()
 })
+
+
+

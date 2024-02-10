@@ -34,6 +34,7 @@ const bodyJson = JSON.stringify(user)
                 window.location.replace('/menuUsuario/index.html')
             }
             else{
+                localStorage.setItem("idAdminSistemaAposta",2)
                 window.location.replace('/menuAdmin/index.html')
             }
             

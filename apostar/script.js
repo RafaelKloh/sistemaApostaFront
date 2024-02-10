@@ -1,5 +1,10 @@
 import {criarModal, mostrarAnimais} from "../modal.js"
 
+// const validacao = localStorage.getItem("idUsuarioSistemaAposta")
+// if(validacao != true){
+//     window.location.replace('../index.html')
+// }
+
 const myHeaders = {
     "Content-Type": "application/json",
 };
