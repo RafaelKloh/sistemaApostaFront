@@ -1,7 +1,7 @@
 import { criarModal } from "../modal.js";
 
 const validacao = localStorage.getItem("idUsuarioSistemaAposta")
-if(validacao != true){
+if(validacao){
     window.location.replace('../index.html')
 }
 

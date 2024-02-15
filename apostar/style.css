@@ -1,8 +1,9 @@
-body {
+body 
+{
     background-color: #2a3046;
 }
-
-h1 {
+h1 
+{
     color: #ffffff;
     text-align: center;
     font-family: 24px Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,8 +13,8 @@ h1 {
     top: 200px;
     left: 02px;
 }
-
-label {
+label#valorAposta
+{
     color: #f1ebeb;
     font-size: 18px;
     opacity: 0.8;
@@ -21,16 +22,34 @@ label {
     top: 252px;
     left: 327px;
 }
-
-p {
+label#numeroAposta
+{
+    color: #f1ebeb;
+    font-size: 18px;
+    opacity: 0.8;
+    position: relative;
+    top: 252px;
+    left: 327px;
+}
+label#formaPagamento
+{
+    color: #f1ebeb;
+    font-size: 18px;
+    opacity: 0.8;
+    position: relative;
+    top: 252px;
+    left: 327px;
+}
+p 
+{
     color: #ccc;
 }
-
-a {
+a
+{
     color: rgb(6, 6, 104);
 }
-
-button {
+button
+{
     width: 25%;
     height: 39px;
     background-color: #a13854;
@@ -43,7 +62,8 @@ button {
     left: 339px;
 }
 
-input#numeroAposta{
+input#numeroAposta
+{
     margin-top: 10px;
     padding: 0 5px;
     border: none;
@@ -55,7 +75,8 @@ input#numeroAposta{
     position: relative;
     left: 329px;
 }
-input#valorAposta{
+input#valorAposta
+{
     margin-top: 10px;
     padding: 0 5px;
     border: none;
@@ -80,7 +101,8 @@ input#valorAposta{
     position: relative;
     left: 326px;
 }
-.card {
+.card 
+{
     background-color: rgba(19, 19, 19, 0.3);
     padding: 116px;
     border-radius: 2px;
