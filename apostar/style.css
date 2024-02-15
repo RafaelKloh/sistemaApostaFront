@@ -18,27 +18,25 @@ label#valorAposta
     color: #f1ebeb;
     font-size: 18px;
     opacity: 0.8;
-    position: relative;
-    top: 252px;
-    left: 327px;
+   
 }
 label#numeroAposta
 {
     color: #f1ebeb;
     font-size: 18px;
     opacity: 0.8;
-    position: relative;
-    top: 252px;
-    left: 327px;
+    
+   
+   
 }
 label#formaPagamento
 {
     color: #f1ebeb;
     font-size: 17px;
     opacity: 1.8;
-    position: revert;
-    top: 252px;
-    left: 37px;
+    
+   
+    
 }
 p 
 {
