@@ -138,3 +138,8 @@ top: 4px;
     left: 0%;
     top: 0%;
 } 
+input#tabelaAnimais{
+     position: relative;
+     top: 55px;
+     left: 730px;
+}
