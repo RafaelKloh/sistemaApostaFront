@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="stylesheet" href="./style.css">
     
 </head>
 <body>
     <h1>Hora de apostar</h1>
-    <form id="form">
-        <label>Escolha um numero</label>
+    <form  class="card" id="form">
+        <label id="numeroAposta">Escolha um numero</label>
         <br>
         <label>Os dois ultimos digitos sao para o bicho!!!</label>
         <br>
         <input type="number" placeholder="00-9999" id="numeroAposta" min="00" max="9999">
         <br>
-        <label>Escolha um valor para sua aposta</label>
+        <label id="valorAposta">Escolha um valor para sua aposta</label>
         <br>
         <input type="number" id="valorAposta">
+   <br>
         <br>
-        <label>Escolha uma forma de pagamento</label>
-        <br>
-        <select name="formaPagamento" id="formaPgamento">
-        </select>
         <br>
         <button id="botao-aposta">APOSTAR</button>
     </form>

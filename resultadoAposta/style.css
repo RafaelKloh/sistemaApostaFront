@@ -1,0 +1,82 @@
+body 
+{
+    background-color: #2a3046;
+}
+h1
+{
+    color: #ffffff;
+    text-align: center;
+    font-family: 24px Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 39px;
+    font-weight: bold;
+    position: relative;
+    top: 200px;
+    left: 02px;
+}
+label#dataConcurso
+{
+    color: #f1ebeb;
+    font-size: 24px;
+    opacity: 0.8;
+    position: relative;
+    top: 7px;
+    left: 13px;
+}
+p 
+{
+    color: #ccc;
+}
+a
+{
+    color: rgb(6, 6, 104);
+}
+button 
+{
+    width: 25%;
+    height: 39px;
+    background-color: #a13854;
+    border: none;
+    color: #e1e1e1;
+    margin: 1px;
+    padding: 5px;
+    top: 269px;
+    position: relative;
+    left: 339px;
+}
+input#dataConcurso
+{
+    margin-top: 10px;
+    padding: 3px 81px;
+    border: none;
+    border-bottom: 1px solid #e1e1e1d8;
+    outline: none;
+    color: #020202;
+    width: 12px;
+    top: 35px;
+    position: relative;
+    left: 23px;
+}
+.card 
+{
+    background-color: rgba(19, 19, 19, 0.3);
+    padding: 133px;
+    border-radius: 2px;
+    width: 465px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 145px;
+}
+input#btn-enviar
+{
+    width: 114%;
+    height: 45px;
+    background-color: #a13854;
+    border: none;
+    color: #e1e1e1;
+    margin: 10px 0;
+    padding: 5px;
+    top: 62px;
+    position: relative;
+    left: 0px;
+}

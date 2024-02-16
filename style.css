@@ -1,8 +1,9 @@
-body {
+body 
+{
     background-color: #2a3046;
 }
-
-h1 {
+h1 
+{
     color: #ffffff;
     text-align: center;
     font-family: 24px Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,36 +13,44 @@ h1 {
     top: 200px;
     left: 10px;
 }
-
-label {
+label#email{
     color: #f1ebeb;
-    font-size: 12px;
     opacity: 0.8;
     position: relative;
-    top: 40px;
+    top: 0px;
+    right: 36px;
+    font-size: 18px;
 }
-
-p {
+label#senha{
+    color: #f1ebeb;
+    opacity: 0.8;
+    position: relative;
+    top: 43px;
+    right: 36px;
+    font-size: 18px;
+}
+p 
+{
     color: #ccc;
 }
-
-a {
+a 
+{
     color: rgb(6, 6, 104);
 }
-
 input[type = "submit"] {
-    width: 100%;
-    height: 40px;
+    width: 162%;
+    height: 44px;
     background-color: #a13854;
     border: none;
     color: #e1e1e1;
     margin: 10px 0;
-    padding: 5px;
-    top: 25px;
+    padding: 0px;
+    top: 61px;
+    right: 33px;
     position: relative;
 }
-
-input#email{
+input#email
+{
     margin-top: 10px;
     padding: 0 5px;
     background-color: transparent;
@@ -50,10 +59,12 @@ input#email{
     outline: none;
     color: #ffffff;
     width: 270px;
-    top:40px;
+    top: 8px;
     position: relative;
+    right: 37px;
 }
-input#senha{
+input#senha
+{
     margin-top: 10px;
     padding: 0 5px;
     background-color: transparent;
@@ -62,16 +73,18 @@ input#senha{
     outline: none;
     color: #ffffff;
     width: 270px;
-    top:40px;
+    top: 45px;
     position: relative;
+    right: 37px;
 }
-.card {
+.card 
+{
     background-color: rgba(19, 19, 19, 0.3);
-    padding: 40px;
+    padding: 116px;
     border-radius: 2px;
-    width: 280px;
+    width: 392px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 100px;
+    top: 145px;
 }
