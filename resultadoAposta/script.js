@@ -3,11 +3,6 @@ const myHeaders = {
     "Content-Type": "application/json",
 };
 
-// const validacao = localStorage.getItem("idUsuarioSistemaAposta")
-// if(validacao != true){
-//     window.location.replace('../index.html')
-// }
-
 async function resultado() {
     let min = 0;
     let max = 9999;
@@ -44,6 +39,7 @@ async function resultado() {
 
     animal = bichos[i]
     const data = dataConcurso.value
+    console.log(data)
     const result = {
         dataSorteio:data,
         numeroMaquina:numeroSorteado,
