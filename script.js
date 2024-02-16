@@ -1,4 +1,4 @@
-import {criarModal} from "./modal.js"
+import { criarModal } from "./modal.js"
 const myHeaders = {
     "Content-Type": "application/json",
 };
@@ -11,7 +11,7 @@ async function login() {
         senha: senha.value
     }
 
-const bodyJson = JSON.stringify(user)
+    const bodyJson = JSON.stringify(user)
     const res = await fetch(
         "http://localhost:3000/login",
         {
@@ -21,23 +21,43 @@ const bodyJson = JSON.stringify(user)
         }
     )
     const resJson = await res.json()
-    console.log(resJson)
-
-    if(resJson.mensagem){
+    
+    if (resJson.mensagem) {
         const mensagemErro = "Usuario não encontrado"
         criarModal(mensagemErro)
     }
+
     for (let i = 0; i < resJson.length; i++) {
-        if(resJson[i].email == email.value && resJson[i].senha == senha.value){
-            localStorage.setItem("idUsuarioSistemaAposta",resJson[i].idUsuario)
-            if(resJson[i].idTipoUsuario == 1){
+        if (resJson[i].email == email.value && resJson[i].senha == senha.value) {
+            const idUsuario = resJson[i].idUsuario;
+            localStorage.setItem("idUsuarioSistemaAposta", idUsuario)
+            const user = {
+                idUsuario: idUsuario
+            }
+
+            const bodyJson = JSON.stringify(user)
+            const resStatus = await fetch(
+                `http://localhost:3000/user/${idUsuario}/status`,
+                {
+                    headers: myHeaders,
+                    method: "POST",
+                    body: bodyJson
+                }
+            )
+
+            const resJsonStatus = await resStatus.json()
+            const idStatus = console.log(resJsonStatus[0])
+            localStorage.setItem("idStatusSistemaAposta", idStatus)
+
+
+            if (resJson[i].idTipoUsuario == 1) {
                 window.location.replace('/menuUsuario/index.html')
             }
-            else{
-                localStorage.setItem("idAdminSistemaAposta",2)
+            else {
+                localStorage.setItem("idAdminSistemaAposta", 2)
                 window.location.replace('/menuAdmin/index.html')
             }
-            
+
         }
     }
 }

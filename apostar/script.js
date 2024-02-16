@@ -18,7 +18,6 @@ async function fromaPagamento() {
         }
     );
     const JsonFormaPagamento = await selectFormaPagamento.json();
-    console.log(JsonFormaPagamento);
 
     const select = document.getElementById("formaPgamento");
 
@@ -51,12 +50,6 @@ async function apostar(){
         valorApostado:valorApostado.value
     }
 
-    if(numeroUsuario.value <= 0 || numeroUsuario.value > 99){
-        const mensagemErro = "Escolha uma opção de aposta válida"
-        criarModal(mensagemErro)
-        return
-    }
-
     if(idUsuario == "" || idUsuario == undefined){
         const mensagemErro = "Você deve estar logado para fazer isso"
         criarModal(mensagemErro)
@@ -80,9 +73,9 @@ async function apostar(){
         }
     )
     const resJson = await res.json()
-    console.log(resJson)
 
-    console.log(res.status)
+
+
     if(res.status == 200){
         window.location.replace("../resultadoAposta/index.html")
     }

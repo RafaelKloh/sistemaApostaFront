@@ -10,8 +10,22 @@ const myHeaders = {
 
 async function resultado() {
     let min = 0;
-    let max = 99;
-    let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+    let max = 9999;
+    let numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    if(numeroSorteado < 100){
+        numeroSorteado = `00${numeroSorteado}`
+    }
+    else if(numeroSorteado < 1000){
+        numeroSorteado = `0${numeroSorteado}`
+    }
+
+    let numeroAleatorio = ("000" + numeroSorteado).slice(-4); // Garante que tenha pelo menos 4 dígitos
+    numeroAleatorio = parseInt(numeroAleatorio.slice(-2), 10);
+
+    if(numeroAleatorio < 10){
+        numeroAleatorio = `0${numeroAleatorio}`
+    }
 
     let bichos = ["avestruz","aguia","burro","borboleta","cachorro","cabra","carneiro","camelo","cobra","coelho","cavalo","elefante","galo","gato","jacare","leao","macaco","porco","pavao","peru","touro","tigre","urso","veado","vaca"]
     let i = 0;
@@ -32,7 +46,7 @@ async function resultado() {
     const data = dataConcurso.value
     const result = {
         dataSorteio:data,
-        numeroMaquina:numeroAleatorio,
+        numeroMaquina:numeroSorteado,
         animalSorteado:animal
     }
 
@@ -46,7 +60,7 @@ const bodyJson = JSON.stringify(result)
         }
     )
     const resJson = await res.json()
-    console.log(resJson)
+
 
     if(resJson.mensagem == "Sorteio ainda não realizado"){
         const mensagemErro = "Sorteio ainda nao realizado"
@@ -73,6 +87,7 @@ const bodyJson = JSON.stringify(result)
         )
         const resJsonSelect = await resSelect.json()
         console.log(resJsonSelect)
+
         for (let i = 0; i < resJsonSelect.length; i++) {
             if(resJsonSelect[i].idUsuario == idUsuario){
                 console.log("voce ganhou nada")
