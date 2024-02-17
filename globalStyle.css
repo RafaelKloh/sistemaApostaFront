@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.modalContainer {
+.modalContainer{
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modalPrincipal {
+.modalPrincipal{
     width: 30%;
     max-width: 400px;
     background-color: #34495e;
@@ -28,7 +28,7 @@
     text-align: center;
 }
 
-#botaoModal {
+#botaoModal{
     width: 100%;
     padding: 10px;
     background-color: #3498db;
@@ -39,6 +39,6 @@
     transition: background-color 0.3s ease;
 }
 
-#botaoModal:hover {
+#botaoModal:hover{
     background-color: #2980b9;
 }

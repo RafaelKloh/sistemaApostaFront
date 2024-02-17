@@ -8,7 +8,6 @@ export function criarModal(mensagemErro){
         </div>
     </div>
     `)
-
     const botaoModal = document.querySelector("#botaoModal")
     botaoModal.addEventListener("click",()=>{
         const modalContainer = document.querySelector(".modalContainer")
@@ -43,7 +42,6 @@ export function modalResult(animal,numero){
         </div>
     </div>
     `)
-
     const botaoModal = document.querySelector("#botaoModal")
     botaoModal.addEventListener("click",()=>{
         const modalContainer = document.querySelector(".modalContainer")

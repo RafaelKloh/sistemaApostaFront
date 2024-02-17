@@ -18,7 +18,6 @@ async function fromaPagamento() {
         }
     );
     const JsonFormaPagamento = await selectFormaPagamento.json();
-
     const select = document.getElementById("formaPgamento");
 
     for (let i = 0; i < JsonFormaPagamento.length; i++) {        
@@ -55,13 +54,11 @@ async function apostar(){
         criarModal(mensagemErro)
         return
     }
-
     if(numeroUsuario.value == "" || valorApostado.value == ""){
         const mensagemErro = "Você preencher todos os campos"
         criarModal(mensagemErro)
         return
     }
- 
 
     const bodyJson = JSON.stringify(aposta)
     const res = await fetch(
@@ -74,15 +71,10 @@ async function apostar(){
     )
     const resJson = await res.json()
 
-
-
     if(res.status == 200){
         window.location.replace("../resultadoAposta/index.html")
     }
-
 }
-
-
 
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {

@@ -21,12 +21,10 @@ async function login() {
         }
     )
     const resJson = await res.json()
-
     if (resJson.mensagem) {
         const mensagemErro = "Usuario não encontrado"
         criarModal(mensagemErro)
     }
-
     for (let i = 0; i < resJson.length; i++) {
         if (resJson[i].email == email.value && resJson[i].senha == senha.value) {
 
@@ -40,11 +38,9 @@ async function login() {
                 localStorage.setItem("idAdminSistemaAposta", 2)
                 window.location.replace('/menuAdmin/index.html')
             }
-
         }
     }
 }
-
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()

@@ -17,7 +17,7 @@ async function resultado() {
 
     let numeroAleatorio = ("000" + numeroSorteado).slice(-4); // Garante que tenha pelo menos 4 dígitos
     numeroAleatorio = parseInt(numeroAleatorio.slice(-2), 10);
-
+    
     if(numeroAleatorio < 10){
         numeroAleatorio = `0${numeroAleatorio}`
     }
@@ -63,7 +63,6 @@ const bodyJson = JSON.stringify(result)
         criarModal(mensagemErro)
         return
     }
-
     else{
         const idUsuario = localStorage.getItem("idUsuarioSistemaAposta")
         const partesData = data.split('-');
@@ -95,7 +94,6 @@ const bodyJson = JSON.stringify(result)
         return
     }
 }
-
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
