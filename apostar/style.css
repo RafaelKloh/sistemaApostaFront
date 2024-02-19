@@ -19,8 +19,8 @@ label#valorAposta
     font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 7px;
- 
+    top: 23px;
+    font-family: sans-serif;
 }
 label#numeroAposta
 {
@@ -29,6 +29,7 @@ label#numeroAposta
     opacity: 0.8;
     position: relative;
     top: 7px;
+    font-family: sans-serif;
   
     
     
@@ -45,32 +46,31 @@ a
 }
 
 button {
-    width: 100%;
-    height: 39px;
+
     background-color: #a13854;
-    border: none;
-    color: #e1e1e1;
-    margin: 1px;
-    padding: 5px;
-    top: 30px;
+    padding: 16px;
+    width: 200px;
+    color:white;
+    font-family: monospace;
     position: relative;
+    top: 38px;
     
 }
 
 input#numeroAposta
 {
     position: relative;
-    top: 7px;
+    top: 13px;
     padding: 5px;
-    width: 208px;
+    width: 170px;
     
 }
 input#valorAposta
 {
     position: relative;
-    top: 10px;
+    top: 30px;
     padding: 5px;
-    width: 208px;
+    width: 17-px;
 
 }
 

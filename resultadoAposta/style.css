@@ -15,10 +15,11 @@ h1
 label#dataConcurso
 {
     color: #f1ebeb;
-    font-size: 24px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
     top: 7px;
+    font-family: sans-serif;
    
 }
 
@@ -42,11 +43,13 @@ input#dataConcurso
 }
 input#btn-enviar
 {
-    position: relative;
-    top: 122px;
+
     background-color: #a13854;
     padding: 16px;
     width: 200px;
-    color:white
+    color:white;
+    font-family: monospace;
+    position: relative;
+    top: 80px;
 
 }
