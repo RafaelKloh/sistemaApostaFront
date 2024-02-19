@@ -2,7 +2,7 @@ import { criarModal } from "../modal.js";
 
 const validacao = sessionStorage.getItem("idUsuarioSistemaAposta")
 if(validacao){
-    window.location.replace('../index.html')
+    window.location.href = '../index.html'
 }
 
 const myHeaders = {
@@ -43,7 +43,7 @@ async function cadastrar() {
     }
 
     else if (res.status == 200) {
-        window.location.replace("../index.html")
+        window.location.href = "../index.html"
     }
 }
 

@@ -50,7 +50,7 @@ async function apostar(){
     const resJson = await res.json()
 
     if(res.status == 200){
-        window.location.replace("../resultadoAposta/index.html")
+        window.location.href = "../resultadoAposta/index.html"
     }
 }
 
