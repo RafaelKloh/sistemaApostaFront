@@ -64,7 +64,7 @@ const bodyJson = JSON.stringify(result)
         return
     }
     else{
-        const idUsuario = localStorage.getItem("idUsuarioSistemaAposta")
+        const idUsuario = sessionStorage.getItem("idUsuarioSistemaAposta")
         const partesData = data.split('-');
         const dataInvertida = partesData.reverse().join('-');
         const bodyData = {

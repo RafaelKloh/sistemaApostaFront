@@ -48,3 +48,21 @@ export function modalResult(animal,numero){
         modalContainer.remove()
     })
 }
+
+export function resultAdmin(nome,valor){
+    const body = document.body
+    body.insertAdjacentHTML("beforeend",`
+    <div class="modalContainer">
+        <div class="modalPrincipal">
+            <p>${nome}</p>
+            <p>${valor}</p>
+            <button id="botaoModal">OK</button>
+        </div>
+    </div>
+    `)
+    const botaoModal = document.querySelector("#botaoModal")
+    botaoModal.addEventListener("click",()=>{
+        const modalContainer = document.querySelector(".modalContainer")
+        modalContainer.remove()
+    })
+}
