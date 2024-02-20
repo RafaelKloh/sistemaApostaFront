@@ -1,0 +1,20 @@
+body{
+    background-color: #2a3046;
+}
+h1{
+    color: white;
+}
+a{
+    color: aliceblue;
+}
+.card 
+{
+    background-color: rgba(19, 19, 19, 0.3);
+    padding: 106px;
+    border-radius: 2px;
+    width: 155px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+}
