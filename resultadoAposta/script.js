@@ -1,4 +1,10 @@
 import { criarModal, modalResult } from "../modal.js"
+import { sair } from "../logout.js"
+
+const validacao = sessionStorage.getItem("idUsuarioSistemaAposta")
+if (!validacao) {
+    window.location.replace('../index.html')
+}
 const myHeaders = {
     "Content-Type": "application/json",
 };
@@ -106,10 +112,20 @@ async function resultado() {
 
     }
 }
+
+async function logout() {
+    sair()
+}
+
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     resultado()
+})
+
+const button = document.getElementById("sair")
+button.addEventListener("click", (event) => {
+    logout()
 })
 
 

@@ -32,11 +32,11 @@ async function login() {
             sessionStorage.setItem("idUsuarioSistemaAposta", idUsuario)
 
             if (resJson[i].idTipoUsuario == 1) {
-                window.location.href = '/menuUsuario/index.html'
+                window.location.href = '/apostar/index.html'
             }
             else {
                 localStorage.setItem("idAdminSistemaAposta", 2)
-                window.location.href ='/menuAdmin/index.html'
+                window.location.href ='/lucroAdmin/index.html'
             }
         }
     }

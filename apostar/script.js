@@ -1,9 +1,10 @@
 import {criarModal, mostrarAnimais} from "../modal.js"
+import { sair } from "../logout.js"
 
-// const validacao = localStorage.getItem("idUsuarioSistemaAposta")
-// if(validacao != true){
-//     window.location.replace('../index.html')
-// }
+const validacao = sessionStorage.getItem("idUsuarioSistemaAposta")
+if (!validacao) {
+    window.location.replace('../index.html')
+}
 
 const myHeaders = {
     "Content-Type": "application/json",
@@ -54,6 +55,11 @@ async function apostar(){
     }
 }
 
+
+async function logout() {
+    sair()
+}
+
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -65,4 +71,9 @@ verAnimais.addEventListener("submit", (event) => {
     event.preventDefault()
     mostrarAnimais()
     return
+})
+
+const button = document.getElementById("sair")
+button.addEventListener("click", (event) => {
+    logout()
 })
