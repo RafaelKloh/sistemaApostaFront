@@ -54,7 +54,7 @@ input#numeroAposta{
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #000000;
-    width: 150px;
+    width: 100%;
     top: 245px;
     position: unset;
     left: 329px;
@@ -66,21 +66,9 @@ input#valorAposta{
     border-bottom: 1px solid #e1e1e1d8;
     outline: none;
     color: #000000;
-    width: 150px;
+    width: 100%;
     top: 248px;
     position: unset;
-    left: 326px;
-}
-#inputformaPagamento{
-    margin-top: 10px;
-    padding: 0 5px;
-    border: none;
-    border-bottom: 1px solid #e1e1e1d8;
-    outline: none;
-    color: #020202;
-    width: 12px;
-    top: 248px;
-    position: relative;
     left: 326px;
 }
 
@@ -100,8 +88,8 @@ left: 1%;
 top: 4px;
 }
 .modalPrincipal{
-    width: 41%;
-    max-width: 400px;
+    width: 105%;
+    max-width: 555px;
     background-color: #34495e;
     position: relative;
     border-radius: 10px;
@@ -111,7 +99,7 @@ top: 4px;
     text-align: center;
 }
 #botaoModal{
-    width: 126%;
+    width: 100%;
     padding: 10px;
     background-color: #3498db;
     color: #ecf0f1;
@@ -122,3 +110,16 @@ top: 4px;
     left: 0%;
     top: 0%;
 } 
+
+#tabelaAnimaisForm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+ 
+}
+#tabelaAnimais{
+    position: relative;
+    bottom: 30%;
+}

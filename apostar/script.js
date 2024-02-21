@@ -12,14 +12,27 @@ const myHeaders = {
 
 async function apostar(){
     const idUsuario = sessionStorage.getItem("idUsuarioSistemaAposta")
-    console.log(idUsuario)
-    console.log(localStorage)
-    const numeroUsuario = document.querySelector("#numeroAposta")
+    let numeroUsuario = document.querySelector("#numeroAposta").value
     const data = new Date()
     const dia = data.getDate()
     const mes = data.getMonth() + 1
     const ano = data.getFullYear()
     const dataCompleta = ano + "-" + mes + "-" + dia
+
+    if(numeroUsuario < 10){
+        numeroUsuario = `000${numeroUsuario}`
+    }
+    else if(numeroUsuario < 100){
+        numeroUsuario = `00${numeroUsuario}`
+    }
+    else if(numeroUsuario < 1000){
+        numeroUsuario = `0${numeroUsuario}`
+    }
+    else if(numeroUsuario == 0){
+        numeroUsuario = "0000"
+    }
+    
+    console.log(numeroUsuario)
     const valorApostado = document.querySelector("#valorAposta")
     const aposta = {
         idUsuario: idUsuario,
@@ -39,6 +52,12 @@ async function apostar(){
         return
     }
 
+    if(valorApostado.value < 20){
+        const mensagemErro = "O valor mínimo da aposta é de R$20"
+        criarModal(mensagemErro)
+        return
+    }
+
     const bodyJson = JSON.stringify(aposta)
     const res = await fetch(
         `http://localhost:3000/user/aposta/${idUsuario}`,
@@ -51,7 +70,7 @@ async function apostar(){
     const resJson = await res.json()
 
     if(res.status == 200){
-        window.location.href = "../resultadoAposta/index.html"
+        //window.location.href = "../resultadoAposta/index.html"
     }
 }
 
