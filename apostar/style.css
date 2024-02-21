@@ -16,29 +16,29 @@ h1
 label#valorAposta
 {
     color: #f1ebeb;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 252px;
-    left: 327px;
+    top: 10px;
+    left: 6px;
 }
 label#numeroAposta
 {
     color: #f1ebeb;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 252px;
-    left: 327px;
+    top: 15px;
+    left: 6px;
 }
 label#formaPagamento
 {
     color: #f1ebeb;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 252px;
-    left: 327px;
+    top: 58px;
+    left: 6px;
 }
 p 
 {
@@ -65,41 +65,41 @@ button
 input#numeroAposta
 {
     margin-top: 10px;
-    padding: 0 5px;
+    padding: 1px 5px;
     border: none;
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #000000;
-    width: 121px;
-    top: 245px;
+    width: 124px;
+    top: 47px;
     position: relative;
-    left: 329px;
+    left: 23px;
 }
 input#valorAposta
 {
     margin-top: 10px;
-    padding: 0 5px;
+    padding: 1px 5px;
     border: none;
-    border-bottom: 1px solid #e1e1e1d8;
+    border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #000000;
-    width: 121px;
-    top: 248px;
+    width: 124px;
+    top: 47px;
     position: relative;
-    left: 326px;
+    left: 23px;
 }
 #inputformaPagamento
 {
     margin-top: 10px;
-    padding: 0 5px;
+    padding: 1px 5px;
     border: none;
-    border-bottom: 1px solid #e1e1e1d8;
+    border-bottom: 1px solid #e1e1e1;
     outline: none;
-    color: #020202;
-    width: 12px;
-    top: 248px;
+    color: #000000;
+    width: 124px;
+    top: 47px;
     position: relative;
-    left: 326px;
+    left: 23px;
 }
 .card 
 {
