@@ -5,12 +5,11 @@ h1{
     color: #ffffff;
     text-align: center;
     font-family: 24px Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 45px;
+    font-size: 38px;
     font-weight: bold;
     position: relative;
     top: 200px;
     left: 10px;
-
 }
 label#email{
     color: #f1ebeb;
@@ -18,8 +17,7 @@ label#email{
     position: relative;
     top: 0px;
     right: 36px;
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: 18px;
 }
 label#senha{
     color: #f1ebeb;
@@ -27,8 +25,7 @@ label#senha{
     position: relative;
     top: 43px;
     right: 36px;
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: 18px;
 }
 p{
     color: #ccc;
@@ -40,12 +37,13 @@ input[type = "submit"]{
     width: 162%;
     height: 44px;
     background-color: #a13854;
-    padding: 16px;
-    width: 200px;
-    color:white;
-    font-family: monospace;
+    border: none;
+    color: #e1e1e1;
+    margin: 10px 0;
+    padding: 0px;
+    top: 61px;
+    right: 33px;
     position: relative;
-    top: 80px;
 }
 input#email{
     margin-top: 10px;
@@ -83,24 +81,3 @@ input#senha{
     transform: translateX(-50%);
     top: 145px;
 }
-/*
-  position: relative;
-    top: 122px;
-    background-color: #a13854;
-    padding: 16px;
-    width: 200px;
-    color:white;
-    font-family: monospace;
- width: 162%;
-    height: 50px;
-    background-color: #a13854;
-    border: none;
-    color: #e1e1e1;
-    margin: 10px 0;
-    padding: 0px;
-    top: 61px;
-    right: 33px;
-    position: relative;
-    font-family: monospace;
-    font-size: large;
-    ;
