@@ -46,6 +46,8 @@ async function resultado() {
     animal = bichos[i]
     const data = dataConcurso.value
     console.log(data)
+    const date = new Date(data)
+    console.log(date)
     const result = {
         dataSorteio: data,
         numeroMaquina: numeroSorteado,

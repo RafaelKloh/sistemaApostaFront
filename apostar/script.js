@@ -85,7 +85,7 @@ form.addEventListener("submit", (event) => {
     apostar()
 })
 
-const verAnimais = document.getElementById("tabelaAnimais")
+const verAnimais = document.getElementById("tabelaAnimaisForm")
 verAnimais.addEventListener("submit", (event) => {
     event.preventDefault()
     mostrarAnimais()

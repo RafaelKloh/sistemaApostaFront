@@ -38,13 +38,25 @@ async function resultado() {
     }
 
     else {
-        let nome = []
-        let valor = []
-        for (let i = 0; i < resJson.length; i++) {
-            nome.push(resJson[i].nome)
-            valor.push(resJson[i].valorApostado)
+        let nomesUnicos = []
+    let valoresAgrupados = {}
+
+    for (let i = 0; i < resJson.length; i++) {
+        const nomeAtual = resJson[i].nome;
+
+        if (!nomesUnicos.includes(nomeAtual)) {
+            nomesUnicos.push(nomeAtual);
+            valoresAgrupados[nomeAtual] = resJson[i].valorApostado;
+        } else {
+            valoresAgrupados[nomeAtual] += resJson[i].valorApostado;
         }
-        resultAdmin(nome, valor)
+    }
+
+    const nomes = Object.keys(valoresAgrupados);
+    const valores = Object.values(valoresAgrupados);
+    const valorTotal = valores.reduce((total, valor) => total + valor, 0);
+
+    resultAdmin(nomes, valores, valorTotal);
     }
 }
 

@@ -89,6 +89,9 @@ input#valorAposta {
     left: 50%;
     transform: translateX(-50%);
     top: 145px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -180,14 +183,4 @@ img {
     color: #3498db;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-}
-
-#dataConcurso{
-    left: 13%;
-    position: relative;
-}
-
-#label-data{
-    left: 10%;
-    position: relative;
 }

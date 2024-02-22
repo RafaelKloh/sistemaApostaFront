@@ -52,13 +52,14 @@ export function modalResult(animal,numero,numeroUsuario,texto){
     })
 }
 
-export function resultAdmin(nome,valor){
+export function resultAdmin(nome,valor,valorTotal){
     const body = document.body
     body.insertAdjacentHTML("beforeend",`
     <div class="modalContainer">
         <div class="modalPrincipal">
-            <p>${nome}</p>
-            <p>${valor}</p>
+            <p>Usuario(s) que apostaram: ${nome}</p>
+            <p>Valor(es) apostados: ${valor}</p>
+            <p>Valor total: ${valorTotal}</p>
             <button id="botaoModal">OK</button>
         </div>
     </div>
