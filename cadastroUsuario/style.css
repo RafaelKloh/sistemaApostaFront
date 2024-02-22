@@ -69,34 +69,30 @@ input#nome{
     top: 6px;
     position: relative;
     right: 33px;
-    font-family: monospace;
 }
 label#email{
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 18px;
+    top: 21px;
     right: 33px;
-    font-family: sans-serif;
 }
 label#senha{
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 27px;
+    top: 34px;
     right: 33px;
-    font-family: sans-serif;
 }
 label#nome{
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.8;
     position: relative;
-    top: 10px;
+    top: 7px;
     right: 33px;
-    font-family: sans-serif;
 }
 .card{
     background-color: rgba(19, 19, 19, 0.3);
@@ -112,8 +108,11 @@ input#btn-login{
     width: 114%;
     height: 45px;
     background-color: #a13854;
-    padding: 16px;
-    width: 200px;
-    color:white;
-    font-family: monospace;
+    border: none;
+    color: #e1e1e1;
+    margin: 10px 0;
+    padding: 5px;
+    top: 55px;
+    position: relative;
+    left: 0px;
 }
