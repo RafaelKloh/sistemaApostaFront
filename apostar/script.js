@@ -36,7 +36,7 @@ async function apostar(){
     const valorApostado = document.querySelector("#valorAposta")
     const aposta = {
         idUsuario: idUsuario,
-        numeroUsuario: numeroUsuario.value,
+        numeroUsuario: numeroUsuario,
         data:dataCompleta,
         valorApostado:valorApostado.value
     }
