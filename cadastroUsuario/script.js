@@ -1,3 +1,10 @@
+import { criarModal } from "../modal.js";
+
+const validacao = localStorage.getItem("idUsuarioSistemaAposta")
+if(validacao){
+    window.location.replace('../index.html')
+}
+
 const myHeaders = {
     "Content-Type": "application/json",
 };
@@ -8,7 +15,8 @@ async function cadastrar() {
     const senha = document.querySelector("#senha")
     
     if(nome.value == "" || email.value == "" || senha.value == ""){
-        alert("Preencha todos os campos")
+        const mensagemErro = "Preencha todods os campos"
+        criarModal(mensagemErro)
         return
     }
 
@@ -32,9 +40,9 @@ async function cadastrar() {
 
 
     const resJson = await res.json()
-
-    if (resJson.erro === 'Email ja cadastrado') {
-        alert("Este email já está cadastrado");
+    if (resJson.mensagem === 'Email ja cadastrado') {
+        const mensagemErro = "Email ja cadastrado"
+        criarModal(mensagemErro)
     }
 
     else if (res.status == 200) {

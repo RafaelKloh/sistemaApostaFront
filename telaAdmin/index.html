@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do bicho</title>
-    <link rel="stylesheet" href="globalStyle.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Login</h1>
+    <h1></h1>
     <div class="card">
     <div class="card-header">
     <form id="form">
-        <label id="email">Email</label>
+        <label>Dia</label>
         <br>
-        <input type="email" id="email">
-        <br>
-        <label id="senha">Senha</label>
-        <br>
-        <input type="password" id="senha">
+        <input type="date" id="numero">
         <br>
         <br>
-        <input type="submit" value="ENTRAR" id="btn btn-outline-success">
+        <label>Valores apostados no dia</label>
+        <br>
+        <input type="value" id="valor">
+        <br>
+        <br>
+        <label>Lucro ou perda diaria</label>
+        <select name="lucro_ou_perda" id="lupe">
+        <option value="lucro">Lucro</option>
+        <option value="perda">Perda</option>
+    </select>
+        <br>
+        <br>
     </form>
     <script src="./script.js" type="module"></script>
 </body>
