@@ -9,15 +9,22 @@
     
 </head>
 <body>
+    <div id="menu-navegacao">
+        <a href="../resultadoAposta/index.html" id="resultado">Ver resultados</a></li>
+        <button id="sair">Sair</button></li>
+    </div>
+
+
+
     <h1>Hora de apostar</h1>
     <form  class="card" id="form">
-        <label id="numeroAposta">Escolha um numero</label>
+        <label>Escolha um numero</label>
         <br>
         <label>Os dois ultimos digitos sao para o bicho!!!</label>
         <br>
-        <input type="number" placeholder="00-9999" id="numeroAposta" min="00" max="9999">
+        <input type="number" placeholder="00-9999" id="numeroAposta" min="0000" max="9999">
         <br>
-        <label id="valorAposta">Escolha um valor para sua aposta</label>
+        <label>Escolha um valor para sua aposta</label>
         <br>
         <input type="number" id="valorAposta">
    <br>
@@ -25,7 +32,7 @@
         <br>
         <button id="botao-aposta">APOSTAR</button>
     </form>
-    <form id="tabelaAnimais">
+    <form id="tabelaAnimaisForm">
         <input type="submit" name="tabelaAnimais" value="VER TABELA" id="tabelaAnimais">
     </form>
     <script src="./script.js" type="module"></script>

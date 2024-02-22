@@ -1,8 +1,8 @@
 import { criarModal } from "../modal.js";
 
-const validacao = localStorage.getItem("idUsuarioSistemaAposta")
+const validacao = sessionStorage.getItem("idUsuarioSistemaAposta")
 if(validacao){
-    window.location.replace('../index.html')
+    window.location.href = '../index.html'
 }
 
 const myHeaders = {
@@ -19,15 +19,14 @@ async function cadastrar() {
         criarModal(mensagemErro)
         return
     }
-
     const cadastro = {
         nome: nome.value,
         email: email.value,
         senha: senha.value,
         idTipoUsuario: 1
     }
-
     const bodyJson = JSON.stringify(cadastro)
+    
     const res = await fetch(
         "http://localhost:3000/user",
         {
@@ -37,8 +36,6 @@ async function cadastrar() {
         }
     )
 
-
-
     const resJson = await res.json()
     if (resJson.mensagem === 'Email ja cadastrado') {
         const mensagemErro = "Email ja cadastrado"
@@ -46,9 +43,8 @@ async function cadastrar() {
     }
 
     else if (res.status == 200) {
-        window.location.replace("../index.html")
+        window.location.href = "../index.html"
     }
-
 }
 
 const form = document.getElementById("form")
