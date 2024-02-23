@@ -11,21 +11,21 @@ h1{
     top: 200px;
     left: 10px;
 }
-label#email{
+label#emailLabel{
     color: #f1ebeb;
     opacity: 0.8;
     position: relative;
     top: 0px;
     right: 36px;
-    font-size: 18px;
+    font-family: sans-serif;
 }
-label#senha{
+label#senhaLabel{
     color: #f1ebeb;
     opacity: 0.8;
     position: relative;
     top: 43px;
     right: 36px;
-    font-size: 18px;
+    font-family: sans-serif;
 }
 p{
     color: #ccc;

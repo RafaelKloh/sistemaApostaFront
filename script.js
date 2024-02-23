@@ -21,6 +21,7 @@ async function login() {
         }
     )
     const resJson = await res.json()
+    console.log(resJson)
     if (resJson.mensagem) {
         const mensagemErro = "Usuario não encontrado"
         criarModal(mensagemErro)
@@ -43,6 +44,7 @@ async function login() {
 }
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
+    console.log("chegou aqui")
     event.preventDefault()
     login()
 })
